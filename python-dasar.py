@@ -13,8 +13,8 @@ if True:
     print("Kode ini berada di dalam blok if")
     print("Masih di dalam blok if")
 print("Kode ini sudah di luar blok if")
-nama = input("Masukkan nama Anda: ")
-print("Halo,", nama)
+
+
 def main():
     print("Hello dari fungsi main!")
 
@@ -44,3 +44,33 @@ z = str(x)   # konversi ke string
 
 print(y, type(y))  # 10.0 <class 'float'>
 print(z, type(z))  # "10" <class 'str'>
+
+nama = "Andi"
+umur = 25
+tinggi = 170.5
+is_active = True
+
+print(nama)      # Andi
+print(umur)      # 25
+print(tinggi)    # 170.5
+print(is_active) # True
+first_name = "Budi"
+total_harga = 10000
+last_name = "Santoso"  # ✅ nama variabel valid
+
+a, b, c = 10, 20, 30
+print(a, b, c)  # 10 20 30
+x = y = z = 100
+print(x, y, z)  # 100 100 100
+nama = "Andi"
+umur = 25
+tinggi = 170.5
+
+print(type(nama))   # <class 'str'>
+print(type(umur))   # <class 'int'>
+print(type(tinggi)) # <class 'float'>
+x = 10
+print(x)  # 10
+
+del x
+# print(x)  # ❌ Error karena variable sudah dihapus
