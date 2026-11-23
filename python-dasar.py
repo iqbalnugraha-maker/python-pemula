@@ -72,24 +72,52 @@ print(type(tinggi)) # <class 'float'>
 x = 10
 print(x)  # 10
 
-del x
-# print(x)  # ❌ Error karena variable sudah dihapus
-PI = 3.14159
-MAX_USERS = 100
-APP_NAME = "Aplikasi Belajar Python"
-PI = 3.14  # ❌ Secara aturan Python boleh, tapi sebaiknya jangan dilakukan
-# constants.py
-PI = 3.14159
-GRAVITY = 9.8
-MAX_RETRY = 3
-from constants import PI, GRAVITY, MAX_RETRY
+a = 10
+b = 3
 
-print("Nilai PI:", PI)
-print("Gravitasi:", GRAVITY)
-print("Maksimum Percobaan:", MAX_RETRY)
-TAX_RATE = 0.1  # 10% pajak
+print(a + b)   # 13
+print(a - b)   # 7
+print(a * b)   # 30
+print(a / b)   # 3.333...
+print(a // b)  # 3
+print(a % b)   # 1
+print(a ** b)  # 1000
+x = 5
+y = 10
 
-harga_barang = 50000
-total = harga_barang + (harga_barang * TAX_RATE)
+print(x == y)  # False
+print(x != y)  # True
+print(x > y)   # False
+print(x < y)   # True
+print(x >= y)  # False
+print(x <= y)  # True
+a = True
+b = False
 
-print("Total harga:", total)
+print(a and b)  # False
+print(a or b)   # True
+print(not a)    # False
+x = 10
+
+x += 5
+print(x)  # 15
+
+x -= 3
+print(x)  # 12
+
+x *= 2
+print(x)  # 24
+
+x /= 4
+print(x)  # 6.0
+buah = ["apel", "jeruk", "mangga"]
+
+print("apel" in buah)      # True
+print("pisang" not in buah) # True
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)     # True (b menunjuk objek yang sama dengan a)
+print(a is c)     # False (c objek berbeda walau isinya sama)
+print(a == c)     # True (nilai isinya sama)
