@@ -1,110 +1,296 @@
-# Python for Beginners
+# Python Pemula — Python for Beginners
 
-This repository contains beginner-friendly Python lessons and exercises.
-It is designed to help you understand Python programming step by step,
-from the basic concepts to building simple programs.
+![Python](https://img.shields.io/badge/python-3.8%2B-blue?logo=python&logoColor=white)
+![Level](https://img.shields.io/badge/level-beginner-green)
+![Type](https://img.shields.io/badge/type-learning%20notes-lightgrey)
+![Commits](https://img.shields.io/badge/commits-Conventional%20Commits-orange)
 
-## Learning Topics
+A hands-on, beginner-friendly collection of Python notes, runnable code snippets, and annotated screenshots. It walks through the language step by step: from installing Python and writing a first `print()` call, to functions, data structures, object-oriented programming (OOP), error handling, file handling, and modules.
 
-1.  **Introduction to Python** --- learn what Python is and what it is
-    used for.
-2.  **Variables and Data Types** --- store data using `int`, `float`,
-    `str`, and `bool`.
-3.  **Input and Output** --- receive user input with `input()` and
-    display results with `print()`.
-4.  **Operators** --- use arithmetic, comparison, and logical operators.
-5.  **Conditional Statements** --- make decisions using `if`, `elif`,
-    and `else`.
-6.  **Loops** --- repeat instructions using `for` and `while`.
-7.  **Lists and Tuples** --- store multiple values in a single variable.
-8.  **Dictionaries and Sets** --- learn about Python's basic data
-    structures.
-9.  **Functions** --- write reusable functions to organize your code.
-10. **Practice Projects** --- combine what you have learned by building
-    simple programs.
+> The learning material is written in **Bahasa Indonesia** (comments, variable names, and screenshot titles). This README is in English to make the project easier to discover and navigate.
 
-## Requirements
+---
 
-Before getting started, make sure you have:
+## Table of Contents
 
--   Python 3
--   Visual Studio Code or another code editor
--   A terminal or command prompt
+- [About the Project](#about-the-project)
+- [Who Is This For?](#who-is-this-for)
+- [What You Will Learn](#what-you-will-learn)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Virtual Environment (Recommended)](#virtual-environment-recommended)
+- [Usage](#usage)
+  - [Running the Scripts](#running-the-scripts)
+  - [Running a Single Snippet](#running-a-single-snippet)
+  - [Quick Example](#quick-example)
+- [Curriculum](#curriculum)
+- [Dependencies](#dependencies)
+- [Known Issues](#known-issues)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Commit Convention](#commit-convention)
+- [License](#license)
+- [Contact](#contact)
 
-Check your Python installation with:
+---
 
-``` bash
+## About the Project
+
+This repository is a personal learning log that doubles as a reference for other beginners. Each topic is covered in three complementary forms:
+
+1. **Code** — short, commented snippets you can copy, run, and modify.
+2. **Screenshots** — visual notes of each topic, stored in `screenshot/` and `ss-dasar/`.
+3. **Git history** — one commit per topic, so you can follow the learning path chronologically with `git log`.
+
+The goal is simple: make the first steps in Python approachable, practical, and easy to review.
+
+## Who Is This For?
+
+- Complete beginners with no prior programming experience.
+- Students taking an introductory programming course.
+- Self-learners looking for a compact reference to revisit core concepts.
+- Anyone who prefers learning by reading and running small examples.
+
+## What You Will Learn
+
+- Installing Python and running your first program
+- The basic structure of a Python program (comments, indentation, `main()` entry point)
+- Variables, constants, and core data types (`int`, `float`, `str`, `bool`)
+- Operators: arithmetic, comparison, logical, assignment, membership, and identity
+- Control flow: `if` / `elif` / `else`, `for`, `while`, `break`, `continue`
+- Functions: parameters, return values, default arguments, `*args`, and `**kwargs`
+- Data structures: lists, tuples, sets, and dictionaries
+- Object-oriented programming: classes and objects, encapsulation, inheritance, polymorphism, abstraction
+- Error handling with `try` / `except` / `else` / `finally` and `raise`
+- File handling with `open()` and context managers (`with`)
+- Modules and the standard library (`math`, `os`, `datetime`)
+- Package management with `pip` and virtual environments (`venv`)
+
+## Repository Structure
+
+```text
+Python Pemula/
+├── python-dasar.py        # Core fundamentals: syntax, data types, control flow,
+│                          # functions, collections, OOP, exceptions, files, modules
+├── belajar-python.py      # Earlier notes: variables, operators, if/else, lists,
+│                          # dictionaries, functions, and classes
+├── contoh.txt             # Sample file generated by the file-handling examples
+├── Requirements.txt       # Dependency list (currently empty: standard library only)
+├── screenshot/            # Topic screenshots: setup, basics, pip & venv
+├── ss-dasar/              # Topic screenshots: fundamentals through OOP
+└── README.md              # Project documentation
+```
+
+## Getting Started
+
+### Prerequisites
+
+- **Python 3.8 or newer** (the snippets use f-strings and `abc`; the author's environment uses Python 3.14)
+- **Git** (to clone the repository)
+- A code editor such as [Visual Studio Code](https://code.visualstudio.com/)
+- A terminal or command prompt
+
+Verify your installation:
+
+```bash
 python --version
 ```
 
-On some systems, use:
+On some systems (macOS, Linux), use `python3` instead:
 
-``` bash
+```bash
 python3 --version
 ```
 
-## Running a Python Program
+### Installation
 
-1.  Clone this repository:
+1. Clone the repository:
 
-    ``` bash
-    git clone https://github.com/USERNAME/REPOSITORY-NAME.git
-    ```
+   ```bash
+   git clone https://github.com/iqbalnugraha-maker/python-pemula.git
+   ```
 
-    Replace `USERNAME` and `REPOSITORY-NAME` with your GitHub username
-    and repository name.
+2. Move into the project directory:
 
-2.  Open the project folder:
+   ```bash
+   cd python-pemula
+   ```
 
-    ``` bash
-    cd REPOSITORY-NAME
-    ```
+### Virtual Environment (Recommended)
 
-3.  Run a Python file:
+The project currently needs no third-party packages, but using a virtual environment is a good habit to build early.
 
-    ``` bash
-    python filename.py
-    ```
+**Windows (PowerShell / CMD)**
 
-    If your system uses `python3`, run `python3 filename.py` instead.
-
-## Example Program
-
-Here is a simple Python program:
-
-``` python
-name = input("Enter your name: ")
-print(f"Hello, {name}! Happy learning Python.")
+```bash
+python -m venv .venv
+.venv\Scripts\activate
 ```
 
-Save the code as `hello.py`, then run:
+**macOS / Linux**
 
-``` bash
-python hello.py
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-## Learning Goals
+Install dependencies (none required at the moment) and deactivate when finished:
 
-After completing the lessons in this repository, you should be able to:
+```bash
+pip install -r Requirements.txt
+deactivate
+```
 
--   Understand the fundamentals of Python.
--   Write and run simple Python programs.
--   Use variables, conditional statements, and loops.
--   Work with basic Python data structures.
--   Create functions and simple projects independently.
+## Usage
 
-## Contributions and Improvements
+### Running the Scripts
 
-You can improve this repository by adding new lessons, code examples, or
-exercises. Try to include a short explanation with each example to make
-the material easier to understand.
+```bash
+python python-dasar.py
+python belajar-python.py
+```
 
-## Notes
+Use `python3` if that is your interpreter's name.
 
-This repository is intended for learning purposes. Study each topic step
-by step and experiment with the example code to improve your
-understanding of Python.
+> **Heads-up:** these files are *collections of independent snippets*, not single cohesive programs. Some sections intentionally redefine the same names or demonstrate mistakes. See [Known Issues](#known-issues) before running a file top to bottom.
 
-------------------------------------------------------------------------
+### Running a Single Snippet
 
-**Happy coding and keep learning!** 🐍
+The recommended way to study is one section at a time:
+
+1. Open the file in your editor.
+2. Select the lines of the topic you are studying.
+3. Run the selection in a terminal or REPL. In VS Code: right-click and choose **Run Selection/Line in Python Terminal**, or press `Shift + Enter`.
+
+### Quick Example
+
+A short taste of what the notes look like (inheritance and polymorphism):
+
+```python
+class Hewan:
+    def __init__(self, nama):
+        self.nama = nama
+
+    def suara(self):
+        print("Hewan ini memiliki suara.")
+
+
+class Kucing(Hewan):
+    def suara(self):
+        print(f"{self.nama} mengeong: Meow!")
+
+
+class Anjing(Hewan):
+    def suara(self):
+        print(f"{self.nama} menggonggong: Guk guk!")
+
+
+for hewan in (Kucing("Tom"), Anjing("Spike")):
+    hewan.suara()
+```
+
+Expected output:
+
+```text
+Tom mengeong: Meow!
+Spike menggonggong: Guk guk!
+```
+
+## Curriculum
+
+| #  | Topic                              | Where to find it                                   |
+|----|------------------------------------|----------------------------------------------------|
+| 1  | Introduction & installation        | `ss-dasar/`, `screenshot/`                         |
+| 2  | Basic program structure            | `python-dasar.py`, `ss-dasar/`                     |
+| 3  | Data types & variables             | `python-dasar.py`, `belajar-python.py`             |
+| 4  | Constants                          | `ss-dasar/`                                        |
+| 5  | Operators                          | `python-dasar.py`, `belajar-python.py`             |
+| 6  | Control flow (conditions & loops)  | `python-dasar.py`, `belajar-python.py`             |
+| 7  | Functions                          | `python-dasar.py`, `belajar-python.py`             |
+| 8  | Lists, tuples, sets                | `python-dasar.py`, `belajar-python.py`             |
+| 9  | Dictionaries                       | `belajar-python.py`, `ss-dasar/`                   |
+| 10 | Classes & objects                  | `python-dasar.py`, `belajar-python.py`             |
+| 11 | Encapsulation                      | `python-dasar.py`, `ss-dasar/`                     |
+| 12 | Inheritance                        | `python-dasar.py`, `ss-dasar/`                     |
+| 13 | Polymorphism                       | `python-dasar.py`, `ss-dasar/`                     |
+| 14 | Abstraction                        | `python-dasar.py`, `ss-dasar/`                     |
+| 15 | Exception handling                 | `python-dasar.py`                                  |
+| 16 | File handling                      | `python-dasar.py`, `contoh.txt`                    |
+| 17 | Modules (`math`, `os`, `datetime`) | `python-dasar.py`                                  |
+| 18 | `pip` & virtual environments       | `screenshot/`                                      |
+
+## Dependencies
+
+The code relies **only on the Python standard library**. `Requirements.txt` is intentionally empty and is reserved for future lessons that need external packages.
+
+Standard-library modules used: `abc`, `math`, `os`, `datetime`.
+
+## Known Issues
+
+These notes are written for learning, so a few behaviors are worth knowing about:
+
+- **`belajar-python.py` stops with a `KeyError: 'jurusan'`** when run top to bottom. The dictionary example calls `mahasiswa.pop("jurusan")` twice, and the second call fails because the key was already removed. Remove the duplicated block (or run the sections individually) to continue past this point.
+- **Names are reused across sections.** Functions such as `belajar_python()` and classes such as `Cat`, `Hewan`, `Kucing`, and `BankAccount` are redefined several times to demonstrate each concept in isolation. Later definitions override earlier ones by design.
+- **Mixed tabs and spaces** appear in a few class examples in `belajar-python.py`. Python 3 can reject this with a `TabError`; configure your editor to insert spaces and keep indentation consistent.
+- **Some inline comments show illustrative output** that differs from the real output (for example, a dictionary comment listing keys that the code does not contain). Treat comments as explanations, and trust the actual program output.
+- **`python-dasar.py` writes `contoh.txt`** in the current working directory when the file-handling section runs.
+
+`python-dasar.py` runs from start to finish without errors on Python 3.12.
+
+## Roadmap
+
+- [ ] Fill in the `Packages` lesson (creating and importing your own packages)
+- [ ] Add a standalone `Requirements.txt` entry when external libraries are introduced
+- [ ] Split the large script files into one file per topic
+- [ ] Add practice exercises with solutions for each topic
+- [ ] Add beginner projects (calculator, to-do list, number guessing game)
+- [ ] Add a `LICENSE` file
+- [ ] Add an English translation of code comments
+
+## Contributing
+
+Contributions that make the material clearer for beginners are welcome.
+
+1. Fork the repository.
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feat/your-topic
+   ```
+
+3. Make your changes. Keep each example **short, commented, and runnable**.
+4. Commit using the [commit convention](#commit-convention) below.
+5. Push the branch and open a Pull Request describing what you added or fixed.
+
+Good first contributions: fixing typos, correcting inaccurate comments, adding exercises, or resolving a [known issue](#known-issues).
+
+## Commit Convention
+
+This project follows [Conventional Commits](https://www.conventionalcommits.org/):
+
+| Prefix      | Use for                                  |
+|-------------|------------------------------------------|
+| `feat:`     | A new lesson, topic, or example          |
+| `docs:`     | README or documentation changes          |
+| `fix:`      | Corrections to code or explanations      |
+| `refactor:` | Restructuring without changing behavior  |
+| `chore:`    | Maintenance (config, housekeeping)       |
+
+Example: `feat: add exception handling lesson`
+
+## License
+
+No license file is currently included in this repository. Until one is added, all rights are reserved by the author. If you plan to reuse or redistribute the material, please contact the repository owner. A permissive license such as [MIT](https://choosealicense.com/licenses/mit/) is recommended for educational projects.
+
+## Contact
+
+- **GitHub:** [@iqbalnugraha-maker](https://github.com/iqbalnugraha-maker)
+- **Repository:** [github.com/iqbalnugraha-maker/python-pemula](https://github.com/iqbalnugraha-maker/python-pemula)
+
+For questions, suggestions, or bug reports, please open an [issue](https://github.com/iqbalnugraha-maker/python-pemula/issues).
+
+---
+
+**Happy coding, and keep learning!** 🐍
