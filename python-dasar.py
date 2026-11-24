@@ -487,3 +487,8 @@ import math
 
 print(math.sqrt(16))   # Akar kuadrat → 4.0
 print(math.pi)         # Nilai π → 3.141592653589793
+
+import os
+print(os.getcwd())   # Menampilkan direktori kerja saat ini
+import datetime
+print(datetime.date.today())  # Menampilkan tanggal hari ini
